@@ -108,14 +108,17 @@ class ChallengeService {
         {
           total: totalCharLocations,
           char: "l",
+          table: "locations",
         },
         {
           total: totalCharEpisodes,
           char: "e",
+          table: "episodes",
         },
         {
           total: totalCharCharacter,
           char: "c",
+          table: "characters",
         },
       ],
       totalTime,

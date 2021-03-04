@@ -8,7 +8,7 @@
 import challengeService from "../services/challengeService.js";
 export default {
   async created() {
-    await challengeService.getAllCharactersNamesWithChar("c");
+    await challengeService.getCounters();
   },
 };
 </script>

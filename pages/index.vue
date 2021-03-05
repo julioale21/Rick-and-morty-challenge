@@ -4,16 +4,25 @@
       class="home bg-no-repeat h-screen bg-center bg-fixed my-0 mx-auto min-h-screen d-flex justify-center items-center"
     >
       <div class="w-full h-full flex flex-col justify-end items-center">
-        <h1 class="title md:text-9xl text-center text-6xl text-white font-bold mb-10 uppercase">
-          Rick and Morty
+        <h1
+          class="title text-6xl md:text-9xl md: text-lg text-center text-pink-500 font-bold mb-10 uppercase"
+          data-aos="fade-up"
+          data-aos-delay="500"
+        >
+          <span>Rick</span>
+          <br />
+          <span>And</span>
+          <br />
+          <span>Morty</span>
         </h1>
-        <div class="flex justify-between mb-5">
+        <div class="flex justify-between mb-5 md:mb-10">
           <div
             v-for="(count, index) in counts"
             :key="index"
             class="flex flex-col justify-start items-center p-2"
+            data-aos="fade-up"
           >
-            <div class="iCountUp text-2xl text-white font-extrabold">
+            <div class="iCountUp text-2xl md:text-5xl text-white font-extrabold">
               <ICountUp :end-val="count.total" :options="options" />
             </div>
             <small class="text-white text-center"
@@ -21,8 +30,12 @@
               {{ count.table }}</small
             >
           </div>
-          <div v-if="totalTime > 0" class="flex flex-col justify-start items-center p-2">
-            <p class="block text-white font-extrabold text-2xl">{{ totalTime }}s</p>
+          <div
+            v-if="totalTime > 0"
+            class="flex flex-col justify-start items-center p-2"
+            data-aos="fade-up"
+          >
+            <p class="block text-white font-extrabold text-2xl md:text-5xl">{{ totalTime }}s</p>
             <small class="text-white">Total time</small>
           </div>
         </div>

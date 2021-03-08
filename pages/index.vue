@@ -63,6 +63,7 @@ export default {
     return {
       counts: [],
       totalTime: 0,
+      episodes: [],
       options: {
         useEasing: true,
         useGrouping: true,
@@ -77,6 +78,7 @@ export default {
     const { counts, totalTime } = await challengeService.getCounters();
     this.counts = counts;
     this.totalTime = totalTime;
+    this.episodes = await challengeService.getAllEpisodesLocations();
   },
 };
 </script>

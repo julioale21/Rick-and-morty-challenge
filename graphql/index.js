@@ -37,3 +37,25 @@ export const GET_LOCATIONS = gql`
     }
   }
 `;
+
+export const GET_ALL_EPISODES = gql`
+  query($page: Int) {
+    episodes(page: $page) {
+      info {
+        pages
+      }
+      results {
+        id
+        name
+        episode
+        characters {
+          name
+          origin {
+            id
+            name
+          }
+        }
+      }
+    }
+  }
+`;
